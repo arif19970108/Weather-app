@@ -1,0 +1,165 @@
+/* Reset all margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body background with gradient */
+body {
+  background: linear-gradient(to right, #053055, #00f2fe);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Main container */
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Title styling */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Search box input styling */
+input {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* Suggestions */
+#suggestions {
+  list-style: none;
+  background: #fff;
+  color: #333;
+  padding: 10px;
+  margin-top: 0;
+  border-radius: 8px;
+  max-height: 150px;
+  overflow-y: auto;
+  text-align: left;
+  width: 80%;
+  margin: 0 auto 10px auto;
+}
+
+#suggestions li {
+  padding: 5px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+#suggestions li:hover {
+  background: #f0f0f0;
+}
+
+#suggestions:empty {
+  display: none;
+}
+
+
+/* Error message styling */
+.error {
+  color: #ffcccc;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Weather display box */
+.weather-box {
+  display: none;
+  text-align: center;
+}
+
+/* Weather icons */
+.weather-box img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+/* Styling for weather details */
+.weather-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.weather-box p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+
+
+/* ---------------------------
+Responsive Media Queries
+----------------------------*/
+
+/* Tablets */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  input {
+    font-size: 0.95rem;
+  }
+
+  .weather-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .weather-box p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
+
+  .weather-box img {
+    width: 80px;
+  }
+
+  .weather-box h2 {
+    font-size: 1.3rem;
+  }
+
+  .weather-box p {
+    font-size: 0.9rem;
+  }
+
+  #suggestions {
+    max-width: 100%;
+    font-size: 0.9rem;
+  }
+}
